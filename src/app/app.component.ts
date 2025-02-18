@@ -10,4 +10,7 @@ import { TarjetaProductoComponent } from './tarjeta-producto/tarjeta-producto.co
 })
 export class AppComponent {
   title = 'app-angular';
+  toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
 }
