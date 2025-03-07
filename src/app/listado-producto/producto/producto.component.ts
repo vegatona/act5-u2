@@ -9,7 +9,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './producto.component.css'
 })
 export class ProductoComponent {
-  // Definimos propiedades con el decorador @Input() para recibir datos desde el componente padre.
+  // Definimos propiedades para recibir datos desde el componente padre.
   @Input() descripcion: string = '';
   @Input() precio: number = 0;
 }

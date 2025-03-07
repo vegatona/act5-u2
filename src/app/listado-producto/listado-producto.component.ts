@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './listado-producto.component.css'
 })
 export class ListadoProductoComponent {
-    //array y lista de productos iniciciales
+    //array y lista de los productos iniciciales
     productos: producto[] = [
       new producto('Laptop HP', 15000),
       new producto('Mouse Gamer', 500),
@@ -22,11 +22,10 @@ export class ListadoProductoComponent {
     // Variables del producto.
     nuevaDescripcion: string = '';
     nuevoPrecio: number | null = null;
-    // Variables para mostrar mensajes de error
     mensajeError: string = '';
      
-    /*Método para agregar un nuevo producto a la lista y
-    que la valida no esté vacía y que el precio sea mayor a 0.*/
+    //Método para agregar un nuevo producto a la lista y
+    //que la valida no esté vacía y que el precio sea mayor a 0.
     agregarProducto() {
       if (!this.nuevaDescripcion.trim()) {
         this.mensajeError = 'La descripción del producto es obligatoria.';
