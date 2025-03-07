@@ -5,11 +5,12 @@ import { ComponentePadreComponent } from './componentes/componente-padre/compone
 import { ReplicadorComponent } from './replicador/replicador.component';
 import { Replicador2Component } from './replicador2/replicador2.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
+import { ListadoProductoComponent } from './listado-producto/listado-producto.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,CalculadoraComponent],
+  imports: [RouterOutlet,ListadoProductoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

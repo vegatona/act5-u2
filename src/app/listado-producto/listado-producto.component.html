@@ -1,0 +1,21 @@
+<div class="tienda-container">
+    <H1>Tienda Online</H1>
+    <!-- Se usa *ngFor para recorrer la lista de productos y mostrar cada uno con el componente Producto -->
+    <div class="listado-productos" *ngFor="let prod of productos">
+            <h2>Listado de Productos</h2>
+            <app-producto [descripcion]="prod.descripcion" [precio]="prod.precio"></app-producto>
+    </div>
+    <!-- Sección para agregar nuevos productos -->
+    <h2>Agregar Nuevo Producto</h2>
+    <div class="formulario">
+        <!-- Inputs enlazados con ngModel para capturar la información ingresada -->
+        <input type="text" [(ngModel)]="nuevaDescripcion" placeholder="Descripción Producto">
+        <input type="number" [(ngModel)]="nuevoPrecio" placeholder="Precio">
+        
+        <!-- Al hacer clic en el botón, se ejecuta el método agregarProducto() -->
+        <button (click)="agregarProducto()">Agregar</button>
+
+        <!-- Mensaje de error si la validación falla -->
+        <p *ngIf="mensajeError" class="error">{{ mensajeError }}</p>
+    </div>
+</div>
