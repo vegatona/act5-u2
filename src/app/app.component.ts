@@ -10,7 +10,10 @@ import { ListadoProductoComponent } from './listado-producto/listado-producto.co
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,ListadoProductoComponent],
+  imports: [RouterOutlet,CalculadoraComponent,TarjetaProductoComponent,
+    ComponentePadreComponent,ReplicadorComponent,Replicador2Component,
+    ListadoProductoComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

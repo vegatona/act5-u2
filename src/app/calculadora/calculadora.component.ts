@@ -1,20 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { FormularioComponent } from "./formulario/formulario.component";
+import { ResultadoComponent } from "./resultado/resultado.component";
 
 @Component({
   selector: 'app-calculadora',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, FormularioComponent, ResultadoComponent],
   templateUrl: './calculadora.component.html',
   styleUrl: './calculadora.component.css'
 })
 export class CalculadoraComponent {
-  numero1: number = 0;
-  numero2: number = 0;
-  resultado: number | null = null;
-
-  sumar(): void {
-    this.resultado = this.numero1 + this.numero2;
-  }
+  resultadoPadre: number | null = null;
+	procesarResultado(resultado: number) {
+		this.resultadoPadre = resultado;
+	}
 }
