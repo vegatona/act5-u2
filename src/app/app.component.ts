@@ -12,8 +12,8 @@ import { ListadoUsuariosComponent } from './listado-usuarios/listado-usuarios.co
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ListadoUsuariosComponent
-  ],
+  imports: [ListadoUsuariosComponent, TarjetaProductoComponent, ComponentePadreComponent,
+    ReplicadorComponent, Replicador2Component, CalculadoraComponent, ListadoProductoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -23,11 +23,12 @@ export class AppComponent {
   toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
   }
+  Titulo = 'Servidor';
   titulo = 'Servicios con Observables en Angular';
   
-  /*mensaje: string;
+  mensaje: string;
   
   constructor(private mensajeService: MensajeService) {
     this.mensaje = this.mensajeService.obtenerMensaje();
-  }*/
+}
 }
